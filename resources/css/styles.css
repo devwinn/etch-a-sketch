@@ -1,0 +1,38 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: grey;
+}
+
+#grid-container {
+    background-color: beige;
+    border: 2px blue solid;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    width: 350px;
+    height: 350px;
+}
+
+#grid-row {
+    display: flex;
+    flex-direction: row;
+}
+
+#grid-square {
+
+    background-color: white;
+    border: 1px black solid;
+    padding: 2%;
+
+
+}
+
+.wrapper {
+    height: 40%;
+    background-color: aquamarine;
+    display: flex;
+    padding: 10%;
+}
