@@ -3,17 +3,20 @@ body {
     height: 100%;
     width: 100%;
     margin: 0;
-    background-color: grey;
+    background-color: black;
 }
 
 #grid-container {
     background-color: beige;
-    border: 2px blue solid;
+    border: 2px solid rgb(105, 158, 238);
+    box-shadow: 0px 0px 21px 21px rgba(105, 158, 238, 0.76);
+    -webkit-box-shadow: 0px 0px 21px 21px rgba(105, 158, 238, 0.76);
+    -moz-box-shadow: 0px 0px 21px 21px rgba(105, 158, 238, 0.76);
     display: flex;
     flex-direction: column;
     margin-left: auto;
-    width: 350px;
-    height: 350px;
+    width: 500px;
+    height: 500px;
 }
 
 #grid-row {
@@ -24,15 +27,27 @@ body {
 #grid-square {
 
     background-color: white;
-    border: 1px black solid;
+    border: 1px rgb(145, 139, 139) solid;
+}
+
+#title {
+    background-color: white;
     padding: 2%;
-
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10%;
+    border-top: 3px solid rgb(105, 158, 238);
+    border-bottom: 3px solid rgb(105, 158, 238);
+    box-shadow: 0px 0px 21px 21px rgba(105, 158, 238, 0.76);
+    -webkit-box-shadow: 0px 0px 21px 21px rgba(105, 158, 238, 0.76);
+    -moz-box-shadow: 0px 0px 21px 21px rgba(105, 158, 238, 0.76);
 }
 
 .wrapper {
     height: 40%;
-    background-color: aquamarine;
+    background-color: rgb(55, 59, 58);
     display: flex;
     padding: 10%;
+    align-items: center;
 }
