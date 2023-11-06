@@ -11,8 +11,7 @@ function makeGrid(size) {
     while (x < size) {
         let insert = document.createElement('div');
         let y = 0;
-        insert.className = `grid-row-${x}`;
-        insert.id = 'grid-row'
+        insert.className = `grid-row-${x} grid-row`;
         gridContainer.appendChild(insert);
         let gridRow = document.getElementsByClassName(`grid-row-${x}`);
         while (y < size) {
@@ -43,4 +42,25 @@ function resetGrid() {
         squares[i].style.backgroundColor = 'white';
     }
     console.log("grid resetting")
+}
+
+var slider = document.getElementById("myRange");
+var output = document.getElementById("grid-size");
+output.innerHTML = `${slider.value} x ${slider.value}`; // Display the default slider value
+
+// Update the current slider value (each time you drag the slider handle)
+slider.oninput = function () {
+    output.innerHTML = `${this.value} x ${this.value}`;
+    removeGrid();
+    makeGrid(this.value);
+}
+
+
+function removeGrid() {
+    console.log("removing grid");
+    let grid = document.querySelectorAll('.grid-row')
+    for (let square of grid) {
+        console.log(square.className);
+        square.remove();
+    }
 }
